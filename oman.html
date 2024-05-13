@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Oman</title>
+    <style>
+      /*here under are all styles of this pag*/
+      .image-with-text {
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+      }
+
+      .image-with-text img {
+        max-width: 50%;
+        margin: 10px;
+      }
+
+      .image-with-text p {
+        flex: 1;
+        text-align: left;
+        margin: 10px;
+      }
+
+      .container {
+        display: flex;
+        width: 100%;
+        padding: 4% 2%;
+        box-sizing: border-box;
+        height: 100vh;
+      }
+
+      .box {
+        flex: 1;
+        overflow: hidden;
+        transition: 0.5s;
+        margin: 0 2%;
+        box-shadow: 0 20px 30px rgba(0, 0, 0, 0.1);
+        line-height: 0;
+      }
+
+      .box > img {
+        width: 200%;
+        height: calc(100% - 10vh);
+        object-fit: cover;
+        transition: 0.5s;
+      }
+
+      .box > span {
+        font-size: 3.8vh;
+        display: block;
+        text-align: center;
+        height: 10vh;
+        line-height: 2.6;
+      }
+
+      .box:hover {
+        flex: 1 1 50%;
+      }
+      .box:hover > img {
+        width: 100%;
+        height: 100%;
+      }
+
+      .main {
+        border-radius: 50%;
+        overflow: hidden;
+      }
+
+      .button-link {
+        display: inline-block;
+        padding: 10px 20px;
+        margin: 50px 0 20px 50px;
+        background: #c1b086;
+        color: white;
+        text-decoration: none;
+        border-radius: 20px;
+      }
+
+      .button-link:hover {
+        background-color: #005903;
+      }
+    </style>
+  </head>
+  <body bgcolor="antiquewhite">
+    <h1 style="text-align: center">OMAN-MUSCAT</h1>
+
+    <p style="font-size: larger">
+      Welcome to the Enchanting Hospitality of Oman: Le Pas Vrai Hotel Nestled
+      in the breathtaking landscapes of Oman, Le Pas Vrai Hotel invites you to
+      <br />embark on a journey of unparalleled luxury and cultural discovery.
+      This five-star oasis blends authentic Omani hospitality with modern
+      elegance, offering a retreat like no other.
+    </p>
+    <div align="center" class="main">
+      <img class="image-with-text" src="assets/o1.jpg" width="750" />
+    </div>
+
+    <div align="center" style="background-color: bisque">
+      <h1>take a look at the rooms and click below for booking.</h1>
+    </div>
+
+    <div class="container">
+      <div class="box">
+        <img src="assets/o2.png" />
+        <span>swimming pool</span>
+      </div>
+      <div class="box">
+        <img src="assets/o3.png" />
+        <span>resturant</span>
+      </div>
+      <div class="box">
+        <img src="assets/o4.png" />
+        <span>room1</span>
+      </div>
+      <div class="box">
+        <img src="assets/o5.png" />
+        <span>room2</span>
+      </div>
+    </div>
+
+    <div align="center">
+      <a href="booking.html" class="button-link">book a room </a>
+    </div>
+
+    <div align="center">
+      <section class="map top">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5931.939873726652!2d58.60374204798896!3d23.57512182565102!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e91f12c9eecaf83%3A0x646e4af76b0c4048!2sAl-Bustan!5e0!3m2!1sen!2som!4v1690957151580!5m2!1sen!2som"
+          width="600"
+          height="450"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </section>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mexico</title>
+    <style>
+      /*here under are all styles of this pag*/
+      .image-with-text {
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+      }
+
+      .image-with-text img {
+        max-width: 50%;
+        margin: 10px;
+      }
+
+      .image-with-text p {
+        flex: 1;
+        text-align: left;
+        margin: 10px;
+      }
+
+      .container {
+        display: flex;
+        width: 100%;
+        padding: 4% 2%;
+        box-sizing: border-box;
+        height: 100vh;
+      }
+
+      .box {
+        flex: 1;
+        overflow: hidden;
+        transition: 0.5s;
+        margin: 0 2%;
+        box-shadow: 0 20px 30px rgba(0, 0, 0, 0.1);
+        line-height: 0;
+      }
+
+      .box > img {
+        width: 200%;
+        height: calc(100% - 10vh);
+        object-fit: cover;
+        transition: 0.5s;
+      }
+
+      .box > span {
+        font-size: 3.8vh;
+        display: block;
+        text-align: center;
+        height: 10vh;
+        line-height: 2.6;
+      }
+
+      .box:hover {
+        flex: 1 1 50%;
+      }
+      .box:hover > img {
+        width: 100%;
+        height: 100%;
+      }
+
+      .main {
+        border-radius: 50%;
+        overflow: hidden;
+      }
+
+      .button-link {
+        display: inline-block;
+        padding: 10px 20px;
+        margin: 50px 0 20px 50px;
+        background: #c1b086;
+        color: white;
+        text-decoration: none;
+        border-radius: 20px;
+      }
+
+      .button-link:hover {
+        background-color: #005903;
+      }
+    </style>
+  </head>
+  <body bgcolor="antiquewhite">
+    <h1 style="text-align: center">MEXICO-MEXICO CITY</h1>
+
+    <p style="font-size: larger">
+      Welcome to Le Pas Vrai - Your Authentic Retreat in Mexico Discover True
+      Mexican Hospitality Nestled in the heart of Mexico, surrounded by
+      breathtaking landscapes and infused with vibrant local culture, Le Pas
+      Vrai offers an unparalleled experience for those seeking an authentic
+      escape. Our boutique hotel embraces the essence of Mexico, from the warm
+      hospitality to the rich traditions, allowing you to immerse yourself in an
+      unforgettable journey.
+    </p>
+    <div align="center" class="main">
+      <img class="image-with-text" src="assets/m1.webp" width="750" />
+    </div>
+
+    <div align="center" style="background-color: bisque">
+      <h1>take a look at the rooms and click below for booking.</h1>
+    </div>
+
+    <div class="container">
+      <div class="box">
+        <img src="assets/m2.jfif" />
+        <span>swimming pool</span>
+      </div>
+      <div class="box">
+        <img src="assets/m3.jfif" />
+        <span>resturant</span>
+      </div>
+      <div class="box">
+        <img src="assets/m4.png" />
+        <span>room1</span>
+      </div>
+      <div class="box">
+        <img src="assets/m5.png" />
+        <span>room2</span>
+      </div>
+    </div>
+
+    <div align="center">
+      <a href="booking.html" class="button-link">book a room </a>
+    </div>
+
+    <div align="center">
+      <section class="map top">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d8030.761383338834!2d-99.17255752980184!3d19.423289801695883!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1ff49bcf0e221%3A0x1a1288424daea159!2sHotel%20Galer%C3%ADa%20Plaza%20Reforma!5e0!3m2!1sen!2som!4v1690957291848!5m2!1sen!2som"
+          width="600"
+          height="450"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </section>
+    </div>
+  </body>
+</html>

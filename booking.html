@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Hotel Booking Form</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <style>
+      /*here under are all styles of this pag,,,,This page for registering*/
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-image: url("assets/o1.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+
+      .container {
+        max-width: 500px;
+        margin: 50px auto;
+        padding: 20px;
+        background-color: #c9eac6;
+        border-radius: 5px;
+        box-shadow: 1 1 10px rgba(1, 1, 1, 1);
+      }
+
+      h2 {
+        text-align: center;
+      }
+
+      form label,
+      form input {
+        display: block;
+        margin-bottom: 10px;
+      }
+
+      .button-link {
+        display: inline-block;
+        padding: 10px 20px;
+        margin: 50px 0 20px 50px;
+        background: #c1b086;
+        color: white;
+        text-decoration: none;
+        border-radius: 20px;
+      }
+
+      .button-link:hover {
+        background-color: #005903;
+      }
+    </style>
+    <script>
+      function message() {
+        alert("You have booked room ");
+      }
+    </script>
+  </head>
+
+  <body>
+    <div class="container">
+      <h2>here you can book a room</h2>
+      <form action="Home.html" method="post" onsubmit="message()">
+        <label for="name">Name:</label>
+        <input type="text" name="name" required />
+
+        <label for="email">Email:</label>
+        <input type="email" name="email" required />
+
+        <label for="check_in">Check-in Date:</label>
+        <input type="date" name="check_in" required />
+
+        <label for="check_out">Check-out Date:</label>
+        <input type="date" name="check_out" required />
+
+        <label for="guests">Number of Guests:</label>
+        <input type="number" name="guests" required />
+
+        <a href="Home.html"><input type="submit" value="save" /></a>
+      </form>
+    </div>
+  </body>
+</html>

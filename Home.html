@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <title>Hotel Website</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="css/style.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css"
+      integrity="sha512-UTNP5BXLIptsaj5WdKFrkFov94lDx+eBvbKyoe1YAfjeRPC+gT5kyZ10kOHCfNZqEui1sxmqvodNUx3KbuYI/A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+      integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script
+      src="https://code.jquery.com/jquery-1.12.4.min.js"
+      integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      table {
+        width: 1000px;
+      }
+
+      table,
+      th,
+      td {
+        border: 4px solid black;
+        text-align: center;
+        vertical-align: bottom;
+      }
+      /*up is table style*/
+    </style>
+  </head>
+
+  <body>
+    <header class="header" id="navigation-menu">
+      <div class="container">
+        <nav>
+          <a href="#" class="logo"> </a>
+
+          <ul class="nav-me">
+            <li><a href="#restaurant" class="nav-link">Restaurant</a></li>
+            &nbsp;
+            <li><a href="#bottom">Contact</a></li>
+            <li></li>
+            <a href="rooms.html">
+            <button style="height: 50px;
+            margin-top: 0;
+            display: grid;
+            place-items: center;
+            padding-block: 0;
+            font-size: 19.2px;
+            background-color: rgb(53, 219, 53);">Booking Rooms</button></a>
+            &nbsp; &nbsp; &nbsp;
+              <a href="index.php"
+                ><button
+                  style="
+                    height: 50px;
+                    margin-top: 0;
+                    display: grid;
+                    place-items: center;
+                    padding-block: 0;
+                    font-size: 19.2px;
+                    background-color: rgba(255, 255, 255, 0.161);
+                  "
+                >
+                  Credit
+                </button></a
+              >
+            </li>
+          </ul>
+
+          <div class="hambuger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <script>
+      const hambuger = document.querySelector(".hambuger");
+      const navMenu = document.querySelector(".m-menu");
+
+      hambuger.addEventListener("click", mobileMenu);
+
+      function mobileMenu() {
+        hambuger.classList.toggle("active");
+        navMenu.classList.toggle("active");
+      }
+
+      const navLink = document.querySelectorAll(".nav-link");
+      navLink.forEach((n) => n.addEventListener("click", closeMenu));
+
+      function closeMenu() {
+        hambuger.classList.remove("active");
+        navMenu.classList.remove("active");
+      }
+    </script>
+
+    <section class="home" id="home">
+      <div class="head_container">
+        <div class="box">
+          <div class="text">
+            <h1>Behind The Gulf Hotel</h1>
+            <p>
+              Welcome With us Behind The Gulf Hotel<br />
+
+              Unveiling the Art of Luxury and Authenticity Step into a world of
+              refined elegance and genuine hospitality at Le Pas Vrai Hotel,
+              where every moment is an experience crafted with care and
+              attention to detail. Nestled in the heart of a vibrant cityscape,
+              our hotel is a haven of tranquility and sophistication, providing
+              an escape from the ordinary.
+            </p>
+          </div>
+        </div>
+        <div class="image">
+          <img src="assets/home4.jpg" alt="" class="slide" />
+        </div>
+        <div class="image_item">
+          <img
+            src="assets/home4.jpg"
+            alt=""
+            class="slide active"
+            onclick="img('assets/home4.jpg')"
+          />
+          <img
+            src="assets/home2.jfif"
+            alt=""
+            class="slide active"
+            onclick="img('assets/home2.jfif')"
+          />
+          <img
+            src="assets/o4.png"
+            alt=""
+            class="slide active"
+            onclick="img('assets/o4.png')"
+          />
+
+          <img
+            src="assets/home1.jpg"
+            alt=""
+            class="slide active"
+            onclick="img('assets/home1.jpg')"
+          />
+        </div>
+      </div>
+    </section>
+
+    <script>
+      function img(anything) {
+        document.querySelector(".slide").src = anything;
+      }
+
+      function change(change) {
+        const line = document.querySelector(".image");
+        line.style.background = change;
+      }
+    </script>
+
+    <br /><br />
+    <br /><br />
+    <!--about-->
+    <section class="about top" id="about">
+      <div class="container flex">
+        <div class="left">
+          <div class="img">
+            <img src="assets/a1.jpg" alt="" class="image1" />
+            <img src="assets/a2.jpg" alt="" class="image2" />
+          </div>
+        </div>
+        <div class="right">
+          <div class="heading">
+            <h5>RAISING COMFOMRT TO THE HIGHEST LEVEL</h5>
+            <h2>WELCOME!!!</h2>
+
+            <p>
+              Indulge in the opulence of our tastefully designed rooms and
+              suites, each exuding an atmosphere of understated grandeur.
+              Embracing a blend of contemporary style and timeless charm, every
+              corner of our property whispers tales of comfort and enchantment.
+              Whether you're a leisure traveler seeking rejuvenation or a
+              business guest seeking the ideal retreat, we have tailored
+              accommodations to suit your every need.<button>
+                <a href="about.php" class="button-link">
+                  press here to see more
+                </a>
+              </button>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="wrapper top">
+      <div class="container">
+        <div class="text">
+          <h2>Our Amenities</h2>
+          <p>
+            Our commitment to exceptional hospitality extends beyond luxurious
+            accommodations; we have curated a range of thoughtful amenities to
+            cater to the diverse needs of our esteemed guests.
+          </p>
+
+          <div class="content">
+            <div class="box flex">
+              <i class="fas fa-swimming-pool"></i>
+              <span>Swimming pool</span>
+            </div>
+            <div class="box flex">
+              <i class="fas fa-dumbbell"></i>
+              <span>Gym & yogo</span>
+            </div>
+            <div class="box flex">
+              <i class="fas fa-spa"></i>
+              <span>Spa & massage</span>
+            </div>
+            <div class="box flex">
+              <i class="fas fa-ship"></i>
+              <span>Boat Tours</span>
+            </div>
+            <div class="box flex">
+              <i class="fas fa-swimmer"></i>
+              <span>Surfing Lessons</span>
+            </div>
+            <div class="box flex">
+              <i class="fas fa-microphone"></i>
+              <span>Conference room</span>
+            </div>
+            <div class="box flex">
+              <i class="fas fa-water"></i>
+              <span>Diving & smorking</span>
+            </div>
+            <div class="box flex">
+              <i class="fas fa-umbrella-beach"></i>
+              <span>Private Beach</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--rooms-->
+
+    <section class="room top" id="room">
+      <div class="container">
+        <div class="heading_top flex1">
+          <div class="heading">
+            <h5>RAISING COMFORT TO THE HIGHEST LEVEL</h5>
+            <h2>Rooms $ Suites</h2>
+          </div>
+        </div>
+        <div class="content grid">
+          <div class="box">
+            <div class="img">
+              <img src="assets/r1.jpg" alt="" />
+            </div>
+            <div class="text">
+              <h3>Superior Soble Rooms</h3>
+              <p><span>$</span>129 <span>/per night</span></p>
+            </div>
+          </div>
+          <div class="box">
+            <div class="img">
+              <img src="assets/r2.jpg" alt="" />
+            </div>
+            <div class="text">
+              <h3>Superior Soble Rooms</h3>
+              <p><span>$</span>129 <span>/per night</span></p>
+            </div>
+          </div>
+          <div class="box">
+            <div class="img">
+              <img src="assets/r3.jpg" alt="" />
+            </div>
+            <div class="text">
+              <h3>Superior Soble Rooms</h3>
+              <p><span>$</span>129 <span>/per night</span></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="wrapper wrapper2 top">
+      <div class="container">
+        <div class="text">
+          <div class="heading">
+            <h5>AT THE HEART OF COMMUNICATION</h5>
+            <h2>People Say</h2>
+          </div>
+
+          <div class="para">
+            <p>
+              The rooms at Le Pas Vrai Hotel are simply exquisite. The attention
+              to detail in the design and decor is remarkable, and the luxurious
+              bedding ensured a restful night's sleep. I appreciated the modern
+              amenities, especially the high-speed Wi-Fi and well-equipped work
+              area, which made my business trip seamless and productive.
+            </p>
+
+            <div class="box flex">
+              <div class="img">
+                <img src="assets/c.jpg" alt="" />
+              </div>
+              <div class="name">
+                <h5>KATE PALMER</h5>
+                <h5>IDAHO</h5>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="restaurant top" id="restaurant">
+      <div class="container flex">
+        <div class="left">
+          <img src="assets/re.jpg" />
+        </div>
+        <div class="right">
+          <div class="text">
+            <h2>Our Restaurant</h2>
+            <p>
+              Le Gourmet's Haven - A Culinary Delight at Le Pas Vrai Hotel<br /><br />
+              At Le Pas Vrai Hotel, we take immense pride in offering a diverse
+              culinary experience that takes our guests on a delightful
+              gastronomic journey around the world. Our four distinctive
+              restaurants, each representing the rich and vibrant flavors of
+              their respective cultures, promise to transport you to Italy,
+              Mexico, Oman, and India without leaving the comfort of our
+              luxurious hotel.
+            </p>
+          </div>
+          <div class="accordionWrapper">
+            <div class="accordionItem open">
+              <h2 class="accordionIHeading">
+                Italian Kitchen:Italian Trattoria - Bella Tavola
+              </h2>
+              <div class="accordionItemContent">
+                <p>
+                  LIndulge in the heartwarming flavors of Italy at Bella Tavola,
+                  our authentic Italian trattoria. Our skilled Italian chefs
+                  craft dishes that pay homage to traditional recipes passed
+                  down through generations. From classic pasta dishes adorned
+                  with velvety sauces to wood-fired pizzas with a crispy crust
+                  and generous toppings, every bite is a celebration of rustic
+                  Italian charm. Pair your meal with a fine Italian wine from
+                  our curated selection for an unforgettable culinary
+                  experience.
+                </p>
+              </div>
+            </div>
+            <div class="accordionItem close">
+              <h2 class="accordionIHeading">
+                Mexican Kitchen:Mexican Cantina - Sabores de México
+              </h2>
+              <div class="accordionItemContent">
+                <p>
+                  At Sabores de México, the vibrant and lively spirit of Mexico
+                  comes alive. Our Mexican cantina offers an array of bold and
+                  flavorful dishes that showcase the true essence of this
+                  captivating cuisine. Savor the rich spices of traditional
+                  tacos, the comforting warmth of hearty enchiladas, and the
+                  zesty freshness of guacamole made from ripe avocados. Complete
+                  your experience with a refreshing margarita or a selection of
+                  premium tequilas to toast to the flavors of Mexico.
+                </p>
+              </div>
+            </div>
+            <div class="accordionItem close">
+              <h2 class="accordionIHeading">
+                Omani Kitchen:Omani Oasis - Sahari Al Watan
+              </h2>
+              <div class="accordionItemContent">
+                <p>
+                  Immerse yourself in the rich culinary heritage of Oman at
+                  Sahari Al Watan. Drawing inspiration from the country's
+                  coastal and desert influences, our Omani restaurant presents a
+                  symphony of aromatic spices and delightful textures. From
+                  succulent grilled meats marinated in traditional spices to
+                  fragrant rice dishes and fresh seafood caught from the Arabian
+                  Sea, every dish reflects the heart and soul of Oman.
+                  Experience the true hospitality of the region as you feast on
+                  Omani delicacies in an inviting and elegant setting.
+                </p>
+              </div>
+            </div>
+            <div class="accordionItem close">
+              <h2 class="accordionIHeading">
+                Indian Kitchen: Indian Spice Trail - Aromas of India
+              </h2>
+              <div class="accordionItemContent">
+                <p>
+                  Embark on a flavorful journey to the land of spices at Aromas
+                  of India. Our Indian restaurant captures the diversity of
+                  India's regional cuisines, bringing together an array of
+                  tantalizing flavors that are sure to please every palate.
+                  Delight in the subtle notes of North Indian curries, the tangy
+                  sensations of South Indian dosas and chutneys, and the
+                  aromatic blend of spices in classic biryanis. Experience the
+                  vibrancy of Indian culture through its food, as we present a
+                  menu that honors the rich traditions and modern influences of
+                  this captivating country.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script>
+      var accItem = document.getElementsByClassName("accordionItem");
+      var accHD = document.getElementsByClassName("accordionIHeading");
+
+      for (i = 0; i < accHD.length; i++) {
+        accHD[i].addEventListener("click", toggleItem, false);
+      }
+
+      function toggleItem() {
+        var itemClass = this.parentNode.className;
+        for (var i = 0; i < accItem.length; i++) {
+          accItem[i].className = "accordionItem close";
+        }
+        if (itemClass == "accordionItem close") {
+          this.parentNode.className = "accordionItem open";
+        }
+      }
+    </script>
+
+    <section class="gallary mtop" id="gallary">
+      <div class="container">
+        <div class="heading_top flex1">
+          <div class="heading">
+            <h5>WELCOME TO OUR PHOTO GALLERY</h5>
+            <h2>Photo Gallery of Our Hotel</h2>
+          </div>
+        </div>
+
+        <div class="owl-carousel owl-theme">
+          <div class="item">
+            <img src="assets/g1.jpg" alt="" />
+          </div>
+          <div class="item">
+            <img src="assets/g2.jpg" alt="" />
+          </div>
+          <div class="item">
+            <img src="assets/g3.jpg" alt="" />
+          </div>
+          <div class="item">
+            <img src="assets/g4.jpg" alt="" />
+          </div>
+          <div class="item">
+            <img src="assets/g5.jpg" alt="" />
+          </div>
+          <div class="item">
+            <img src="assets/g6.jpg" alt="" />
+          </div>
+          <div class="item">
+            <img src="assets/g7.jpg" alt="" />
+          </div>
+          <div class="item">
+            <img src="assets/g8.jpg" alt="" />
+          </div>
+        </div>
+      </div>
+    </section>
+    <div align="center">
+      <!--Here is another table-->
+      <table>
+        <tr>
+          <th>Rooms:</th>
+          <th>Description</th>
+        </tr>
+        <tr>
+          <td>Oman :</td>
+          <td>
+            Immerse yourself in the rich culinary heritage of Oman at Sahari Al
+            Watan. Drawing inspiration from the country's coastal and desert
+            influences, our Omani restaurant presents a symphony of aromatic
+            spices and delightful textures. From succulent grilled meats
+            marinated in traditional spices to fragrant rice dishes and fresh
+            seafood caught from the Arabian Sea, every dish reflects the heart
+            and soul of Oman.
+          </td>
+        </tr>
+        <tr>
+          <td>Itali :</td>
+          <td>
+            LIndulge in the heartwarming flavors of Italy at Bella Tavola, our
+            authentic Italian trattoria. Our skilled Italian chefs craft dishes
+            that pay homage to traditional recipes passed down through
+            generations. From classic pasta dishes adorned with velvety sauces
+            to wood-fired pizzas with a crispy crust and generous toppings,
+            every bite is a celebration of rustic Italian charm. Pair your meal
+            with a fine Italian wine from our curated selection for an
+            unforgettable culinary experience.
+          </td>
+        </tr>
+        <tr>
+          <td>Indian :</td>
+          <td>
+            Embark on a flavorful journey to the land of spices at Aromas of
+            India. Our Indian restaurant captures the diversity of India's
+            regional cuisines, bringing together an array of tantalizing flavors
+            that are sure to please every palate. Delight in the subtle notes of
+            North Indian curries, the tangy sensations of South Indian dosas and
+            chutneys, and the aromatic blend of spices in classic biryanis.
+            Experience the vibrancy of Indian culture through its food, as we
+            present a menu that honors the rich traditions and modern influences
+            of this captivating country.
+          </td>
+        </tr>
+        <tr>
+          <td>Mexican:</td>
+          <td>
+            At Sabores de México, the vibrant and lively spirit of Mexico comes
+            alive. Our Mexican cantina offers an array of bold and flavorful
+            dishes that showcase the true essence of this captivating cuisine.
+            Savor the rich spices of traditional tacos, the comforting warmth of
+            hearty enchiladas, and the zesty freshness of guacamole made from
+            ripe avocados. Complete your experience with a refreshing margarita
+            or a selection of premium tequilas to toast to the flavors of
+            Mexico.
+          </td>
+        </tr>
+      </table>
+    </div>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.js"
+      integrity="sha512-gY25nC63ddE0LcLPhxUJGFxa2GoIyA5FLym4UJqHDEMHjp8RET6Zn/SHo1sltt3WuVtqfyxECP38/daUc/WVEA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+      integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script>
+      $(".owl-carousel").owlCarousel({
+        loop: true,
+        margin: 10,
+        nav: true,
+        dots: false,
+        navText: [
+          "<i class='fas fa-chevron-left'></i>",
+          "<i class='fas fa-chevron-right'></i>",
+        ],
+        responsive: {
+          0: {
+            items: 1,
+          },
+          768: {
+            items: 2,
+          },
+          1000: {
+            items: 4,
+          },
+        },
+      });
+    </script>
+
+    <div id="bottom"></div>
+    <footer>
+      <div class="container grid top">
+        <div class="box">
+          <img
+            src="https://img.icons8.com/external-flatart-icons-flat-flatarticons/48/000000/external-hotel-hotel-services-and-city-elements-flatart-icons-flat-flatarticons-1.png"
+          />
+          <p>
+            At Le Pas Vrai Hotel, we offer a seamless and secure payment process
+            to ensure your transactions are convenient and hassle-free. Here's
+            how you can pay for your stay and any other services you enjoy at
+            our hotel:
+          </p>
+
+          <p>Accepted payment methods</p>
+          <div class="payment grid">
+            <img src="https://img.icons8.com/color/48/000000/visa.png" />
+            <img src="https://img.icons8.com/color/48/000000/mastercard.png" />
+            <img
+              src="https://img.icons8.com/color-glass/48/000000/paypal.png"
+            />
+            <img src="https://img.icons8.com/fluency/48/000000/amex.png" />
+          </div>
+        </div>
+        <!--Here there are nestd-Nested List-->
+        <div class="box">
+          <h3>Recent News</h3>
+
+          <ul>
+            <li>Our Secret Island Boat Tour Is Just for You</li>
+            <li>Chill and Escape in Our Natural Shelters</li>
+            <li>September in Luviana Hotel</li>
+            <li>Live Music Concerts at Luviana</li>
+          </ul>
+        </div>
+
+        <div class="box">
+          <h3>For Customers</h3>
+          <ul>
+            <li>About Luviana</li>
+            <li>Customer Care/Help</li>
+            <li>Corporate Accounts</li>
+            <li>Financial Information</li>
+            <li>Terms & Conditions</li>
+          </ul>
+        </div>
+        /
+        <div class="box">
+          <h3>Contact Us</h3>
+
+          <ul>
+            <li>3015 Grand Ave, Cocount Grove, Merrick Way FL 123456</li>
+            <li><i class="far fa-envelope"></i>&nbsp; example@unizwa.edu.om</li>
+            <li><i class="far fa-phone-alt"></i>&nbsp;123457989</li>
+            <li><i class="far fa-phone-alt"></i>&nbsp;786465679</li>
+            <li><i class="far fa-comments"></i>&nbsp;24/7 Customer Services</li>
+          </ul>
+        </div>
+      </div>
+      <a href="#navigation-menu" class="button-link"
+        >click here to go back to the top</a
+      >
+    </footer>
+  </body>
+</html>
